@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="landing">
+    <h1>Create Your Professional Resume</h1>
+    <p>Build a job-winning resume in minutes with live preview and customizable templates.</p>
+    <button onclick="showBuilder()">Start Building</button>
+    <div class="switchers">
+      <a href="#">Template Switcher</a> | <a href="#">Theme Switcher</a>
+    </div>
+  </section>
+
+  <section id="builder" class="builder hidden">
+    <div class="form-container">
+      <h2>Resume Form</h2>
+      <input type="text" id="name" placeholder="Full Name" />
+      <input type="text" id="title" placeholder="Job Title" />
+      <input type="file" id="photo" accept="image/*" />
+      <input type="text" id="guardian" placeholder="Guardian Name" />
+      <input type="text" id="github" placeholder="GitHub Profile Link" />
+      <input type="text" id="phone" placeholder="Phone" />
+      <input type="email" id="email" placeholder="Email" />
+      <input type="text" id="address" placeholder="Address" />
+      <textarea id="profile" placeholder="Profile Summary"></textarea>
+      
+      <h3>Education</h3>
+      <div id="education-container"></div>
+      <button onclick="addEducation()">Add Education</button>
+
+      <h3>Work Experience</h3>
+      <div id="company-container"></div>
+      <button onclick="addCompany()">Add Company</button>
+
+      <h3>Projects</h3>
+      <div id="project-container"></div>
+      <button onclick="addProject()">Add Project</button>
+
+      <h3>Skills</h3>
+      <input type="text" id="skills" placeholder="Comma-separated skills" />
+
+      <h3>Languages</h3>
+      <input type="text" id="languages" placeholder="Comma-separated languages" />
+
+      <h3>Hobbies</h3>
+      <input type="text" id="hobbies" placeholder="Comma-separated hobbies" />
+      <button onclick="generateResume()">Generate Resume</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <div id="resume-preview" class="resume">
+      <!-- Live Preview Injected by JavaScript -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name | Built with 💻 HTML, CSS & JS | <a href="#">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
